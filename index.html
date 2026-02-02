@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-sec">
+    <h1 class="logo">KANBAN</h1>
+    <button id="toggle-modal" class="primary-btn">Add Task</button>
+</header>
+
+<main class="down-sec">
+
+    <div class="board" id="todo">
+        <div class="heading">
+            <span>TO-DO</span>
+            <span class="count">0</span>
+        </div>
+
+        <div class="task" draggable="true">
+            <h3>Task 1</h3>
+            <p>Add description</p>
+            <button class="delete">✕</button>
+        </div>
+    </div>
+
+    <div class="board" id="progress">
+        <div class="heading">
+            <span>IN PROGRESS</span>
+            <span class="count">0</span>
+        </div>
+    </div>
+
+    <div class="board" id="done">
+        <div class="heading">
+            <span>DONE</span>
+            <span class="count">0</span>
+        </div>
+    </div>
+
+</main>
+<!-- MODAL -->
+<div class="modal hidden" id="task-modal">
+
+    <div class="modal-bg"></div>
+
+    <div class="modal-box">
+        <h2>Add New Task</h2>
+
+        <input type="text" id="task-title" placeholder="Task title">
+        <textarea id="task-desc" placeholder="Task description"></textarea>
+
+        <div class="modal-actions">
+            <button id="add-task-btn">Add Task</button>
+            <button id="close-modal">Cancel</button>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

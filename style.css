@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1f2a2a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+.top-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #111;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.primary-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #3d8181;
+    color: white;
+}
+
+/* BOARD AREA */
+.down-sec {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    min-height: calc(100vh - 70px);
+}
+
+/* COLUMN */
+.board {
+    flex: 1;
+    background: #294040;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* COLUMN HEADER */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* TASK */
+.task {
+    background: #3d8181;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    cursor: grab;
+}
+
+.task h3 {
+    font-size: 14px;
+}
+
+.task p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.task .delete {
+    align-self: flex-end;
+    background: #c73636;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* DRAG EFFECT */
+.drag-hover {
+    border: 2px dashed white;
+    transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .down-sec {
+        flex-direction: column;
+    }
+}
+/* MODAL BASE */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+/* HIDE MODAL */
+.hidden {
+    display: none;
+}
+
+/* BACKGROUND BLUR */
+.modal-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* MODAL BOX */
+.modal-box {
+    position: relative;
+    background: #294040;
+    padding: 20px;
+    width: 320px;
+    border-radius: 10px;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-box h2 {
+    text-align: center;
+}
+
+.modal-box input,
+.modal-box textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task-btn {
+    background: #3d8181;
+    color: white;
+}
+
+#close-modal {
+    background: #c73636;
+    color: white;
+}
